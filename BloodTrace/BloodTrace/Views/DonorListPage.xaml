@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Search Results" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BloodTrace.Views.DonorListPage">
+   
+        
+  
+    <StackLayout>
+      
+        <ListView  HasUnevenRows="True" x:Name="donorList" IsVisible="True" ItemSelected="donorList_ItemSelected" SeparatorColor="Red">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <ic:CircleImage Source="{Binding FullLogoPath}" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" WidthRequest="80" Margin="5" Grid.Column="0"></ic:CircleImage>
+                            <StackLayout Grid.Column="1" Margin="5,5,0,0">
+                                <Label Text="{Binding Username}" VerticalOptions="Center" FontSize="Large" FontAttributes="Bold"></Label>
+                                <Label Text="{Binding BloodGroup}" VerticalOptions="Center" FontSize="Medium" TextColor="Red"></Label>
+                                <Label Text="{Binding Country}" VerticalOptions="Center" FontSize="Medium" TextColor="Gray"></Label>
+                            </StackLayout>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+ 
+</ContentPage>

@@ -1,0 +1,71 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  BackgroundColor="White" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BloodTrace.Views.Home">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Logout" Clicked="ToolbarItem_Clicked"></ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <AbsoluteLayout>
+        <StackLayout Spacing="0" BackgroundColor="White" AbsoluteLayout.LayoutBounds="0,0,1,0.1" AbsoluteLayout.LayoutFlags="All">
+            <Label x:Name="userLbl"  TextColor="Black" FontAttributes="Bold"  FontSize="Medium" HorizontalOptions="End" Margin="0,0,10,0"></Label>
+            <BoxView HeightRequest="5" Color="Green"></BoxView>
+        </StackLayout>
+        <Image Source="back.jpg" Aspect="Fill" AbsoluteLayout.LayoutBounds="0,0.08,1,0.6" AbsoluteLayout.LayoutFlags="All"></Image>
+       
+        
+        
+        
+        <Grid AbsoluteLayout.LayoutBounds="0,1,1,0.5" AbsoluteLayout.LayoutFlags="All" BackgroundColor="White">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*"></RowDefinition>
+                <RowDefinition Height="20"></RowDefinition>
+                <RowDefinition Height="*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.4*"></ColumnDefinition>
+                <ColumnDefinition Width="0.2*"></ColumnDefinition>
+                <ColumnDefinition Width="0.4*"></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+
+
+            <StackLayout Grid.Row="0" Grid.Column="0" Margin="55,50,0,0" VerticalOptions="Center">
+                <Image Source="searchicon.png" WidthRequest="40" HeightRequest="40"></Image>
+                <Label Text="Find Blood Group" HorizontalTextAlignment="Center" FontSize="Micro"></Label>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout Grid.Row="0" Grid.Column="2" Margin="0,50,40,0" VerticalOptions="Center">
+                <Image Source="register.png" WidthRequest="40" HeightRequest="40"></Image>
+                <Label Text="Register Blood Group" HorizontalTextAlignment="Center" FontSize="Micro"></Label>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" Grid.Column="2" Margin="0,-30,40,0" VerticalOptions="Center">
+                <Image Source="ask.png" WidthRequest="40" HeightRequest="40"></Image>
+                <Label Text="Help" HorizontalTextAlignment="Center" FontSize="Micro"></Label>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_2"></TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+
+            <StackLayout Grid.Row="2" Grid.Column="0" Margin="55,-30,0,0" VerticalOptions="Center">
+                <Image Source="latest.png" WidthRequest="40" HeightRequest="40"></Image>
+                <Label Text="All Blood Donors" HorizontalTextAlignment="Center" FontSize="Micro"></Label>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_3"></TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+            </StackLayout>
+            <Image Source="linev.png" Grid.Column="1" Grid.Row="0" Grid.RowSpan="3"></Image>
+            <Image Source="lineh.png" Grid.Column="0" Grid.Row="1" Grid.ColumnSpan="3"></Image>
+        </Grid>
+    </AbsoluteLayout>
+        
+    
+  
+   
+</ContentPage>

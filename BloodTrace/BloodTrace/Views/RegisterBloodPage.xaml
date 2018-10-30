@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  Title="Register Blood Donor" xmlns="http://xamarin.com/schemas/2014/forms"
+              xmlns:clr="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"
+             xmlns:local="clr-namespace:BloodTrace.Controls"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BloodTrace.Views.RegisterBloodPage">
+    <ScrollView>
+    <StackLayout Margin="30">
+        <clr:CircleImage x:Name="ImgDonar" HeightRequest="120" WidthRequest="120" Aspect="AspectFill" VerticalOptions="Center" Margin="0,0,0,0"></clr:CircleImage>
+         
+        <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Padding="20">
+            <StackLayout.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1"></TapGestureRecognizer>
+            </StackLayout.GestureRecognizers>
+            <Image Source="camera.png" WidthRequest="20" HeightRequest="20"></Image>
+            <Label HorizontalOptions="Center" Text="Add Photo" FontSize="Medium" FontAttributes="Bold" TextColor="Blue"></Label>
+        </StackLayout>
+
+        <local:ImageEntry Image="usericon" ImageHeight="30" ImageWidth="30" x:Name="nametextbox" Placeholder="Enter Name" FontSize="Medium" FontAttributes="Italic" Margin="0,5,5,10"></local:ImageEntry>
+        <local:ImageEntry Image="iconemail" ImageHeight="30" ImageWidth="30" x:Name="emailtextbox" Placeholder="Enter Email" FontSize="Medium" FontAttributes="Italic" Margin="0,5,5,10"></local:ImageEntry>
+        <local:ImageEntry Image="iconphone" ImageHeight="30" ImageWidth="30" x:Name="phonetextbox" Keyboard="Telephone" Placeholder="Enter Phone" FontSize="Medium" FontAttributes="Italic" Margin="0,5,5,10"></local:ImageEntry>
+        <Picker x:Name="BloodPicker" Title="Select a Blood Group" TextColor="Red" FontSize="Medium" Margin="0,5,5,10">
+            <Picker.Items>
+                <x:String>A+</x:String>
+                <x:String>B+</x:String>
+                <x:String>O+</x:String>
+                <x:String>AB+</x:String>
+            </Picker.Items>
+        </Picker>
+        <Picker x:Name="CountryPicker" Title="Select a Country" FontSize="Medium" TextColor="Red" Margin="0,5,5,20">
+                <Picker.Items>
+                    <x:String>Nigeria</x:String>
+                    <x:String>Ghana</x:String>
+                    <x:String>Benin Republic</x:String>
+                    <x:String>South Africa</x:String>
+                    <x:String>Cameroon</x:String>
+                    <x:String>USA</x:String>
+                </Picker.Items>
+          
+           
+        </Picker>
+     
+     
+        <local:RoundButton  Text="Submit" Clicked="RoundButton_Clicked">
+            
+        </local:RoundButton>
+    </StackLayout>
+    </ScrollView>
+</ContentPage>

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  xmlns="http://xamarin.com/schemas/2014/forms"
+         xmlns:local="clr-namespace:BloodTrace.Controls"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BloodTrace.Views.SignInPage">
+  
+    <Grid>
+            <Grid.RowDefinitions>
+            
+                <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+            
+           
+        </Grid.RowDefinitions>
+
+            <Image Source="BloodT.png" Grid.Row="0" Margin="0,40,0,0" HeightRequest="200" WidthRequest="200"></Image>
+            <StackLayout Grid.Row="1" Margin="40,40,40,0">
+                <local:ImageEntry LineColor="Red" Image="iconemail" ImageHeight="30" ImageWidth="30" x:Name="EntryEmail" Placeholder="Email" FontAttributes="Italic" Margin="0,0,0,20" ></local:ImageEntry>
+            <local:ImageEntry x:Name="EntryPassword" LineColor="Red" Image="iconpassword" ImageHeight="30" ImageWidth="30" Placeholder="Password" FontAttributes="Italic" Margin="0,0,0,40" IsPassword="True"></local:ImageEntry>
+            <local:RoundButton x:Name="BtnLogin" Text="Login" FontAttributes="Bold" TextColor="White" Clicked="Button_Clicked"></local:RoundButton>
+           
+            </StackLayout>
+            <StackLayout Grid.Row="3" Padding="0,10,0,10" Orientation="Horizontal" HorizontalOptions="Center">
+                <Label Text="Dont have an account?"></Label>
+                <StackLayout Spacing="0">
+                    <Label Text="Sign Up" FontAttributes="Bold" FontSize="Medium">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                    </Label>
+                    <BoxView Color="Red" HeightRequest="1"></BoxView>
+                </StackLayout>
+            </StackLayout>
+
+        </Grid>
+    
+
+</ContentPage>  

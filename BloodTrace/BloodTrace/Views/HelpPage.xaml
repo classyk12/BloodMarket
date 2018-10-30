@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage BackgroundColor="White" Title="Get Help" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BloodTrace.Views.HelpPage">
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center">
+        <Image Source="help2.png" HeightRequest="400" WidthRequest="400"></Image>
+        <Label Text="Call 08164324517 or Email at Loneleo05@gmail.com" FontAttributes="Bold" TextColor="Black" FontSize="Large" Margin="20"></Label>
+    </StackLayout>
+</ContentPage>

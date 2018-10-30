@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage Title="Sign Up" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:local="clr-namespace:BloodTrace.Controls"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BloodTrace.Views.SignUpPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+
+            <RowDefinition Height="auto"></RowDefinition>
+            <RowDefinition Height="auto"></RowDefinition>
+
+
+        </Grid.RowDefinitions>
+
+        <Image Source="BloodT.png" Grid.Row="0" Margin="0,20,0,0" HeightRequest="200" WidthRequest="200"></Image>
+        <StackLayout Grid.Row="1" Margin="40,40,40,0">
+            <local:ImageEntry LineColor="Red" Image="iconemail" ImageHeight="30" ImageWidth="30" x:Name="EntryEmail" Placeholder="Email" FontAttributes="Italic" Margin="0,0,0,20" ></local:ImageEntry>
+            <local:ImageEntry LineColor="Red" Image="iconpassword" ImageHeight="30" ImageWidth="30" x:Name="EntryPassword" Placeholder="Password" FontAttributes="Italic" Margin="0,0,0,20" IsPassword="True"></local:ImageEntry>
+            <local:ImageEntry LineColor="Red" Image="iconpassword" ImageHeight="30" ImageWidth="30" x:Name="EntryPassword2" Placeholder="Confirm Password" FontAttributes="Italic" Margin="0,0,0,40" IsPassword="True"></local:ImageEntry>
+            <local:RoundButton x:Name="BtnSignUp" Text="Sign Up" FontAttributes="Bold" TextColor="White" Clicked="BtnSignUp_Clicked"></local:RoundButton>
+          
+        </StackLayout>
+      
+
+    </Grid>
+
+</ContentPage>

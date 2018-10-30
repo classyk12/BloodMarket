@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage  Title="Profile Page" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:ic="clr-namespace:ImageCircle.Forms.Plugin.Abstractions;assembly=ImageCircle.Forms.Plugin"            
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="BloodTrace.Views.ProfilePage">
+    <AbsoluteLayout>
+        <Image x:Name="Pic" AbsoluteLayout.LayoutBounds="0,0,1,0.5" AbsoluteLayout.LayoutFlags="All" Aspect="AspectFill"></Image>
+        <ic:CircleImage AbsoluteLayout.LayoutBounds="0.5,0.08,0.3,0.2" AbsoluteLayout.LayoutFlags="All" x:Name="DonarImg" Aspect="AspectFill"></ic:CircleImage>
+        <Label x:Name="NameLbl" FontAttributes="Bold" FontSize="30"  HorizontalTextAlignment="Center" AbsoluteLayout.LayoutBounds="0.5,0.38,0.5,0.3" AbsoluteLayout.LayoutFlags="All"></Label>
+        <StackLayout  Orientation="Horizontal" AbsoluteLayout.LayoutBounds="0.5,0.4,1,0.1" AbsoluteLayout.LayoutFlags="All" HorizontalOptions="Center">
+            <Button Clicked="TapGestureRecognizer_Tapped" Text="Call" HorizontalOptions="Center" HeightRequest="120" WidthRequest="120" BackgroundColor="Red" TextColor="White" BorderRadius="20" Padding="10" Margin="10"></Button>
+            <Button Clicked="TapGestureRecognizer_Tapped_1" Text="Email" HorizontalOptions="Center" HeightRequest="120" WidthRequest="120" BackgroundColor="Red" TextColor="White" BorderRadius="20" Padding="10" Margin="10"></Button>
+        </StackLayout>
+
+
+
+     
+        <Frame BackgroundColor="White" HasShadow="true" OutlineColor="Red" AbsoluteLayout.LayoutBounds="0,0.65,1,0.2" AbsoluteLayout.LayoutFlags="All" Margin="30,0,30,0">
+          <StackLayout>
+          <Label Text="Blood Group" HorizontalOptions="Center" FontSize="25" FontAttributes="Bold" Grid.Row="0" Grid.Column="1"></Label>
+             <Label x:Name="LblBloodGroup" HorizontalOptions="Center" FontSize="Large" TextColor="Red" Grid.Row="1" Grid.Column="1"></Label>                             
+             </StackLayout>               
+        </Frame>
+     
+      
+       <Frame BackgroundColor="White" HasShadow="true" OutlineColor="Red" AbsoluteLayout.LayoutBounds="0,0.95,1,0.2" AbsoluteLayout.LayoutFlags="All" Margin="30,0,30,0">
+         <StackLayout>       
+             <Label Text="Country" HorizontalOptions="Center" FontSize="25" FontAttributes="Bold" Grid.Row="0" Grid.Column="1"></Label>
+             <Label x:Name="LblCountry" HorizontalOptions="Center" FontSize="Large" TextColor="Red" Grid.Row="1" Grid.Column="1"></Label>                                                      
+          </StackLayout>  
+        </Frame>
+        
+      
+      
+      
+         <!--<Grid>
+           
+         </Grid>-->
+        <!--<StackLayout BackgroundColor="Red" AbsoluteLayout.LayoutBounds="0,0.6,1,0.1" AbsoluteLayout.LayoutFlags="All" Margin="20,0,20,0">-->
+         
+                            <!--<Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="0.25*"></ColumnDefinition>
+                                <ColumnDefinition Width="*"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+                            <ic:CircleImage HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" WidthRequest="80" Margin="5" Grid.Column="0"></ic:CircleImage>
+                            <StackLayout Grid.Column="1" Margin="5,5,0,0">
+                                <Label Text="Blood Group" VerticalOptions="Center" FontSize="Large" FontAttributes="Bold"></Label>
+                                <Label x:Name="LblBloodGroup" VerticalOptions="Center" FontSize="Medium" TextColor="Red"></Label>                             
+                            </StackLayout>-->
+                       
+            <!--<Label Text="Blood Group" FontAttributes="Bold" FontSize="25" TextColor="Black"></Label>
+            <Label x:Name="LblBloodGroup"  FontSize="Medium" TextColor="White"></Label>-->
+        <!--</StackLayout>-->
+         
+      
+        <!--<StackLayout BackgroundColor="Red" AbsoluteLayout.LayoutBounds="0,0.75,1,0.1" AbsoluteLayout.LayoutFlags="All"  Margin="20,0,20,0">
+
+            <Label Text="Country" FontAttributes="Bold" FontSize="25" TextColor="Black"></Label>
+            <Label x:Name="Lblcountry"  FontSize="Medium" TextColor="White"></Label>
+        </StackLayout>-->
+
+        <!--<StackLayout  AbsoluteLayout.LayoutBounds="0,0.9,1,0.1" Orientation="Horizontal" AbsoluteLayout.LayoutFlags="All" Padding="0,0,0,0">
+            <Image Source="EMAILBIG.PNG" HeightRequest="150" WidthRequest="150" HorizontalOptions="Center">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped" NumberOfTapsRequired="1" ></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+            <Image Source="CallBig.png" HeightRequest="150" WidthRequest="150" HorizontalOptions="EndAndExpand">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1" NumberOfTapsRequired="1"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
+          
+        </StackLayout>-->
+    </AbsoluteLayout>
+</ContentPage>
